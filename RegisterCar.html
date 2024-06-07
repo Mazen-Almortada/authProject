@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Car</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            width: 400px;
+            height:600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label, input[type="text"], input[type="submit"] {
+                       box-sizing: border-box;
+            display: block;
+                        width: 100%; 
+                        padding: 20px;            
+                     
+        }
+        input[type="submit"] {
+            background-color: #79f7f0;
+            color: black;
+            border: none;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+              margin-top: 15px;
+        }
+    </style>
+<script>
+function showMas(){
+        var carImageUrl = document.getElementById("car_image_url").value;
+        var carName = document.getElementById("car_name").value;
+        var carOwnerName = document.getElementById("car_owner_name").value;
+        var carPrice = document.getElementById("car_price").value;
+        
+        if (carImageUrl === "" || carName === "" || carOwnerName === "" || carPrice === "") {
+            alert("Please complete car information!");
+            return false;
+        }
+        alert("Sent successfully");
+
+        return true;
+    }
+</script>
+</head>
+<body>
+    <form action="insert_car.php" method="post">
+        <h2>Register Car information</h2>
+        <label for="car_image_url">Car image URL:</label>
+        <input type="text" id="car_image_url" name="car_image_url" required>
+        <label for="car_name">Car Name:</label>
+        <input type="text" id="car_name" name="car_name" required>
+        <label for="car_owner_name">Car Owner Name:</label>
+        <input type="text" id="car_owner_name" name="car_owner_name" required>
+        <label for="car_price">Renting Price:</label>
+        <input type="text" id="car_price" name="car_price" required>
+        <input type="submit" value="Register" onclick="return showMas()">
+    </form>
+</body>
+</html>

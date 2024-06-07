@@ -1,0 +1,93 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    
+   
+  
+    background-color: #f9fafc;
+ 
+}
+
+
+
+
+p {
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+}
+.account{
+    color: #aaa;
+}
+main {
+    
+    
+    width: 35%;
+   
+   
+}
+
+@media screen and (max-width: 600px){
+    main {
+        
+        width: 75%;
+       
+    }
+    input[type="text"],
+input[type="password"] ,input[type="email"]{
+
+    width: 85% !important;
+}
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] , input[type="email"]{
+    width: 92%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    color: #1916e0;
+}
+#signup{
+    color: #1916e0; 
+}
+#signup:hover{
+    color: #37beb8 ;
+}
+button {
+    background-color: #79f7f0;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    width: 100%;
+    font-size: medium;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #37beb8;
+}
